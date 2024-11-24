@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <div class="bg-image">
+        <div class="container">
+            <div class="To-Do">
+                <h2>
+                    To Do List  
+                    <img src="Images/icon.png" alt="Task icon" class="icon">
+                </h2> 
+                <div class="row">
+                    <div class="input-container">
+                        <input type="text" placeholder="Add Task..." id="input-box">
+                        <button class="but" onclick="add()">Add</button>
+                    </div>
+                    <ul id="list">
+                        <!-- <li class="checked">
+                            <span class="tick-icon"></span> Task 1 
+                            <span class="trash-icon" onclick="deleteTask(this)">✖</span>
+                        </li> 
+                        <li class="checked">
+                            <span class="tick-icon"></span> Task 2 
+                            <span class="trash-icon" onclick="deleteTask(this)">✖</span>
+                        </li>
+                        <li class="checked">
+                            <span class="tick-icon"></span> Task 3
+                            <span class="trash-icon" onclick="deleteTask(this)">✖</span>
+                        </li> -->
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- jQuery Ripples JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

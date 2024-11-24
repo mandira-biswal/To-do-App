@@ -1,0 +1,184 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url('Images/ocean.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px; /* Increase width if needed */
+    width: 90%; /* Use a percentage for responsiveness */
+    height: auto; /* Allow height to adjust based on content */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(11.5px);
+    border-radius: 20px; /* Change to a more rounded border */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    padding: 20px; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the total width/height */
+}
+
+.input-container {
+    display: flex; /* Use flexbox to align items */
+    width: 100%; /* Full width */
+}
+
+#input-box {
+    flex: 1; /* Allow the input to take the available space */
+    padding: 10px; /* Padding for input */
+    border-radius: 18px 0 0 18px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    font-size: 16px; /* Font size for input */
+    box-shadow: 0 8px 32px rgba(21, 24, 68, 0.37);
+    backdrop-filter: blur(11.5px);
+    cursor: pointer;
+}
+
+
+.trash-icon {
+    cursor: pointer; /* Pointer cursor for clickable icons */
+    margin-left: 10px; /* Space between task text and icons */
+}
+
+.trash-icon {
+    color: rgb(14, 13, 13); /* Color for trash icon */
+}
+
+
+.To-Do {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the start */
+}
+
+
+.To-Do h2 {
+    font-size: 24px; /* Adjust size as needed */
+    line-height: 30px; /* Match line height with icon height */
+    display: flex; /* Use flex for alignment */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margins */
+    color: #002765;
+}
+
+.To-Do .icon {
+    width: 30px;  /* Adjust size */
+    height: 30px; /* Adjust size */
+    margin-left: 10px; /* Space between text and icon */
+    cursor: pointer;
+}
+
+.but {
+    outline: none;
+    padding: 10px 20px; /* Adjusted padding */
+    border: none;
+    background-color: #002765;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 18px 18px 0; /* Rounded corners */
+    margin-left: -5px; /* Adjust overlap with the input */
+    transition: background-color 0.3s;
+}
+
+.but:hover {
+    background-color: #1c65ad; /* Darker shade on hover */
+}
+
+.row {
+    margin-top: 15px; /* Space between the header and input */
+    width: 100%; /* Full width of the container */
+}
+
+
+li {
+    padding: 12px 8px 12px 50px; /* Existing padding */
+    position: relative;
+    border: none;
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #10412f;
+    border: 2px solid rgb(201, 190, 169);
+    border-radius: 18px;
+    font-size: large;
+    margin-bottom: 10px; /* Add margin to create gap */
+}
+
+.tick-icon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    display: inline-block; /* To position it inline with text */
+    background-image: url('Images/tick.png'); /* Path to your tick icon */
+    background-size: cover;
+    background-position: center;
+    margin-right: 8px; /* Space between tick and text */
+    visibility: hidden; /* Initially hide the tick */
+}
+
+.checked .tick-icon {
+    visibility: visible; /* Show tick for checked items */
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(Images/circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #3e3535;
+}
+
+ul li.checked::before {
+    background-image: url(Images/ch.png);
+}
+
+.trash-icon {
+    width: 28px; /* Set size for the icon */
+    height: 28px; /* Set size for the icon */
+    background-size: cover;
+    background-position: center;
+    position: absolute; /* Position it absolutely */
+    font-size: large;
+    top: 12px; /* Align it vertically */
+    right: 8px; /* Align it to the right */
+    cursor: pointer; /* Change cursor on hover */
+    margin-left: 10px; /* Add space between task text and the trash icon */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 20px; /* Space around the text */
+    background-color: rgba(255, 255, 255, 0.8); 
+    position: absolute; /* Position it at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; 
+    height: 25px;
+    padding-top: 5px;
+    color: black;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+}
